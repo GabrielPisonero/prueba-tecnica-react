@@ -16,8 +16,6 @@ const UserTable = ({ users, deleteUser }) => {
         </tr>
       </thead>
       <tbody>
-      // Para cada usuario en el array de usuarios, se renderiza un componente UserRow
-      // Se pasa el usuario y la función deleteUser como props a cada UserRow
         {users.map(user => (
           <UserRow key={user.id} user={user} deleteUser={deleteUser} />
         ))}

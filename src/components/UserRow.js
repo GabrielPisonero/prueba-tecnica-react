@@ -10,7 +10,6 @@ const UserRow = ({ user, deleteUser }) => {
       <td>{user.lastName}</td>
       <td>{user.email}</td>
       <td>
-        // Cuando se hace clic en el boton, se llama a la función deleteUser con el id del usuario
         <button className="delete-button" onClick={() => deleteUser(user.id)}>Delete</button>
       </td>
     </tr>
