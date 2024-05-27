@@ -9,8 +9,11 @@ Se realizó una aplicación con una interfaz de gestión de usuarios usando Reac
 ### Se usaron los componentes: 
 
 App: Obtiene la lista de usuarios de la API y la pasa a otros componentes para su manipulación
+
 UserTable: Muestra la lista de usuarios como una tabla y se conecta con el UserRow para representar cada fila de usuario
+
 UserRow: Es cada fila individual de la tabla de usuarios, la cual muestra la información de cada usuario y tiene un botón para eliminar a un usuario específico de la lista
+
 AddUserForm: Se encarga de agregar usuarios nuevos a la lista con los campos de nombre, apellido y correo electrónico
 
 ### Funcionamiento de la página
