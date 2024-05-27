@@ -4,7 +4,7 @@
     color: white;
     border: none;
     padding: 5px 10px;
-    cursor: pointer;
+    cursor: pointer; /* Cambio de cursor al pasar el ratón */
     border-radius: 4px;
   }
   
