@@ -36,7 +36,7 @@ const App = () => {
   // Se renderiza el componente
   return (
     <div className="container">
-      <h1>Gestión de Usuarios</h1>
+      <h1>Users Management</h1>
       <AddUserForm addUser={addUser} />
       <UserTable users={users} deleteUser={deleteUser} />
     </div>
