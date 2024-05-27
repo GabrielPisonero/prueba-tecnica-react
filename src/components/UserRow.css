@@ -1,0 +1,16 @@
+.delete-button {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .delete-button:hover {
+    background-color: #c0392b;
+  }
+  
+
+  

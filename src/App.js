@@ -1,25 +1,39 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
+import UserTable from './components/UserTable';
+import AddUserForm from './components/AddUserForm';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    fetch('https://api.fake-rest.refine.dev/users')
+      .then(response => response.json())
+      .then(data => {
+        const activeUsers = data.filter(user => user.status);
+        setUsers(activeUsers);
+      })
+      .catch(error => console.error('Error al obtener usuarios:', error));
+  }, []);
+
+  const addUser = (user) => {
+    const newUser = { ...user, id: users.length + 1, status: true };
+    setUsers([...users, newUser]);
+  };
+
+  const deleteUser = (id) => {
+    if (window.confirm('¿Estás seguro de que deseas eliminar este usuario?')) {
+      setUsers(users.filter(user => user.id !== id));
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <h1>Gestión de Usuarios</h1>
+      <AddUserForm addUser={addUser} />
+      <UserTable users={users} deleteUser={deleteUser} />
     </div>
   );
-}
+};
 
 export default App;

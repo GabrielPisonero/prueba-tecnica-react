@@ -1,0 +1,36 @@
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  animation: fadeIn 0.5s ease; /* Animación de entrada */
+}
+
+.user-table th, .user-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.user-table th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.user-table tr:nth-child(even) {
+  background-color: #f9f9f9; /* Color de fondo para filas pares */
+}
+
+.user-table tr:hover {
+  background-color: #f1f1f1; /* Cambio de color al pasar el cursor */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Opacidad inicial */
+    transform: translateY(-20px); /* Desplazamiento hacia arriba */
+  }
+  to {
+    opacity: 1; /* Opacidad final */
+    transform: translateY(0); /* Sin desplazamiento */
+  }
+}
